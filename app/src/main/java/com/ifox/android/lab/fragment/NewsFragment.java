@@ -20,6 +20,7 @@ import com.ifox.android.lab.utils.NewsUtils;
 import java.util.ArrayList;
 
 /**
+ * sher
  * 公告托管
  */
 public class NewsFragment extends Fragment{

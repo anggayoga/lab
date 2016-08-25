@@ -13,6 +13,7 @@ import com.ifox.android.lab.bean.NewsBean;
 import java.util.ArrayList;
 
 /**
+ * sher
  * 公告适配器
  */
 public class NewsAdapter extends BaseAdapter {

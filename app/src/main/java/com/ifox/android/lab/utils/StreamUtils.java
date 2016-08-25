@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
 /**
+ * sher
  * 使用String输出
  */
 public class StreamUtils {

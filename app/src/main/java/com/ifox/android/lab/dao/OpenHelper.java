@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
+/**sher
  * 公告数据库
  */
 public class OpenHelper extends SQLiteOpenHelper{

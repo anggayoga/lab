@@ -13,6 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 /**
+ * sher
  * 公告数据获取
  */
 public class NewsDaoUtils {

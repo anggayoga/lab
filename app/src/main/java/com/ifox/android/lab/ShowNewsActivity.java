@@ -13,6 +13,7 @@ import com.ifox.android.lab.bean.DataHolder;
 import static com.ifox.android.lab.R.id.toolbar;
 
 /**
+ * sher
  * 公告详情
  */
 public class ShowNewsActivity extends AppCompatActivity {

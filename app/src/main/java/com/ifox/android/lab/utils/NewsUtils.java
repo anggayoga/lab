@@ -16,6 +16,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 /**
+ * sher
  * 解析公告json
  */
 public class NewsUtils {

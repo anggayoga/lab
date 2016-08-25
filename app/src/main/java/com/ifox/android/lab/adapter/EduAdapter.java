@@ -13,6 +13,7 @@ import com.ifox.android.lab.bean.EduBean;
 import java.util.ArrayList;
 
 /**
+ * sher
  * 教学资源适配器
  */
 public class EduAdapter extends BaseAdapter{

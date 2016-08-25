@@ -24,6 +24,7 @@ import com.ifox.android.lab.utils.NewsUtils;
 import static com.ifox.android.lab.R.id.toolbar;
 
 /**
+ * sher
  * 主活动，管理 fragment
  */
 public class MainActivity extends AppCompatActivity {

@@ -13,6 +13,7 @@ import com.ifox.android.lab.bean.DataHolder;
 import static com.ifox.android.lab.R.id.toolbar;
 
 /**
+ * sher
  * 教学资源详情
  */
 public class ShowEduActivity extends AppCompatActivity {

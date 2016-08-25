@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.ifox.android.lab.R;
 
 /**
+ * sher
  * 教学视频托管
  */
 public class VideoFragment extends Fragment{
