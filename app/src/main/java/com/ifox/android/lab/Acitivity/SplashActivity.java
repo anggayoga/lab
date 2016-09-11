@@ -8,6 +8,7 @@ import android.os.Handler;
 import com.ifox.android.lab.R;
 
 /**
+ * sher
  * 启动应用，设置停留时间，使mainactivity有时间获取服务器数据
  */
 public class SplashActivity extends Activity{

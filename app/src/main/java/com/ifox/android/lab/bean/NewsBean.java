@@ -3,6 +3,7 @@ package com.ifox.android.lab.bean;
 import android.graphics.Bitmap;
 
 /**
+ * sher
  * 公告模型
  */
 public class NewsBean {

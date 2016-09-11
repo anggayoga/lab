@@ -7,6 +7,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="start"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
@@ -16,9 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include layout="@layout/toolbar_base"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <include
+            layout="@layout/toolbar"/>
 
         <FrameLayout
             android:id="@+id/fragment"
@@ -35,14 +35,28 @@
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
+        android:id="@+id/nav_view_wrapper"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity = "start"
-        android:fitsSystemWindows="true"
+        android:layout_gravity="start">
 
-        app:headerLayout="@layout/item_nav"
-        app:menu="@menu/nav_menu"
-        app:itemIconTint="@android:color/holo_purple" />
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nologin_nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|top"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/item_nav"
+            app:menu="@menu/nav_menu" />
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/foot_menu" />
+
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>

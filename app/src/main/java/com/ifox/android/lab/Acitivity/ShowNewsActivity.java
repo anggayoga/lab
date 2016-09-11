@@ -14,6 +14,7 @@ import com.ifox.android.lab.bean.DataHolder;
 import static com.ifox.android.lab.R.id.toolbar;
 
 /**
+ * sher
  * 公告详情
  */
 public class ShowNewsActivity extends AppCompatActivity {
@@ -38,7 +39,7 @@ public class ShowNewsActivity extends AppCompatActivity {
     // 设置标题栏
     private void toolBar() {
         Toolbar mToolbar = (Toolbar) findViewById(toolbar);
-        mToolbar.setTitle("lab");
+        mToolbar.setTitle("公告");
         mToolbar.setTitleTextAppearance(this, R.style.Theme_ToolBar_Base_Title);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

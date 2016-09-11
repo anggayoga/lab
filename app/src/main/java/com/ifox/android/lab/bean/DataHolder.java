@@ -1,6 +1,7 @@
 package com.ifox.android.lab.bean;
 
 /**
+ * sher
  * 静态Holder传递数据
  */
 public class DataHolder {

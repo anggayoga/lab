@@ -3,6 +3,7 @@ package com.ifox.android.lab.bean;
 import android.graphics.Bitmap;
 
 /**
+ * sher
  * 教学资源模型
  */
 public class EduBean {

@@ -16,13 +16,14 @@ import java.net.URL;
 import java.util.ArrayList;
 
 /**
+ * sher
  * 解析公告json
  */
 public class NewsUtils {
 
-    public static String newsPath_url="http://222.196.200.105:8080/lab/listAllNew.json";
+    public static String newsPath_url="http://222.196.200.137:8080/lab/listAllNew.json";
 
-    public static String newsPicPath_url="http://222.196.200.105:8080/lab/upload/";
+    public static String newsPicPath_url="http://222.196.200.137:8080/lab/upload/";
 
     // 从服务器获取数据
     public static ArrayList<NewsBean> getAllNewsForNetWork(Context context){

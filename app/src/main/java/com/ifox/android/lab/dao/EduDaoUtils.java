@@ -13,6 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 /**
+ * sher
  * 教学资源数据获取
  */
 public class EduDaoUtils {
