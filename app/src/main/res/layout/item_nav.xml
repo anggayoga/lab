@@ -8,25 +8,73 @@
     android:theme="@style/Theme.AppCompat.Light">
 
     <!--侧边栏条目-->
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:layout_gravity="center"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/h13" />
-
-    <TextView
-        android:id="@+id/tv_note"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sher"
-        android:textSize="20sp" />
-
-    <View
+    <RelativeLayout
+        android:id="@+id/noLogin"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/holo_blue_bright" />
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nav_header_bg"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:text="登录或注册"
+            android:textColor="@color/white"
+            android:layout_margin="16dp"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/logintext" />
+
+        <ImageView
+            android:id="@+id/loginpage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_right_arror"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/logintext"
+            android:clickable="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nav_header_bg"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_gravity="left"
+            android:layout_margin="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sher"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_gravity="left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_tx" />
+
+    </RelativeLayout>
 
 </LinearLayout>

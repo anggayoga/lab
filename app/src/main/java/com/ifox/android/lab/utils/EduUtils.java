@@ -21,9 +21,9 @@ import java.util.ArrayList;
  */
 public class EduUtils {
 
-    public static String eduPath_url="http://222.196.200.105:8080/lab/listAllTheory.json";
+    public static String eduPath_url="http://222.196.200.137:8080/lab/listAllTheory.json";
 
-    public static String eduPicPath_url="http://222.196.200.105:8080/lab/upload/";
+    public static String eduPicPath_url="http://222.196.200.137:8080/lab/upload/";
 
     // 从服务器获取数据
     public static ArrayList<EduBean> getAllEduForNetWork(Context context){

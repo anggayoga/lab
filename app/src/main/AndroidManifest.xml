@@ -28,6 +28,8 @@
         <activity android:name=".video.Activity.SearchActivity" />
         <activity android:name=".video.Activity.DownLoadActivity" />
         <activity android:name=".video.Activity.LocalVideoPlayActivity"></activity>
+        <activity android:name=".Acitivity.LoginActivity" />
+        <activity android:name=".Acitivity.RegisterActivity" />
     </application>
 
 </manifest>

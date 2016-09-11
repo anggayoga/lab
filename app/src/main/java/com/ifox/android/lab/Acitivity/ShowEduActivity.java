@@ -38,7 +38,7 @@ public class ShowEduActivity extends AppCompatActivity {
     // 设置标题栏
     private void toolBar() {
         Toolbar mToolbar = (Toolbar) findViewById(toolbar);
-        mToolbar.setTitle("lab");
+        mToolbar.setTitle("教学资源");
         mToolbar.setTitleTextAppearance(this, R.style.Theme_ToolBar_Base_Title);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -11,9 +11,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.ToolBar.Base.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/black</item>
+    <style name="Theme.ToolBar.Base.Title"
+        parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
     </style>
 
 </resources>

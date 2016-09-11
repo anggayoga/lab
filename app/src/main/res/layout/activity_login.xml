@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loginRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="用户名："
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:id="@+id/name"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="80dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:layout_marginRight="64dp"
+                android:layout_alignBottom="@+id/name"
+                android:layout_toEndOf="@+id/name"
+                android:id="@+id/login_edit_account" />
+
+            <TextView
+                android:text="还没注册？"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignEnd="@+id/login_btn_login"
+                android:id="@+id/register"
+                android:clickable="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:layout_marginRight="64dp"
+                android:id="@+id/login_edit_pwd"
+                android:layout_alignBaseline="@+id/paw"
+                android:layout_alignBottom="@+id/paw"
+                android:layout_toEndOf="@+id/name" />
+
+            <Button
+                android:text="登录"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_btn_login"
+                android:layout_below="@+id/login_edit_pwd"
+                android:layout_alignEnd="@+id/login_edit_pwd"
+                android:layout_marginTop="18dp" />
+
+            <TextView
+                android:text="密码："
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:id="@+id/paw"
+                android:layout_marginTop="48dp"
+                android:layout_below="@+id/name"
+                android:layout_toStartOf="@+id/login_edit_pwd" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2">
+
+    </LinearLayout>
+
+</LinearLayout>

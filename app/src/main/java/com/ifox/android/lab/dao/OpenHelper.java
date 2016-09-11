@@ -47,4 +47,5 @@ public class OpenHelper extends SQLiteOpenHelper{
                 "et_attachName text," +
                 "et_attachAddress blob)");
     }
+
 }
