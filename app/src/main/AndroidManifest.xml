@@ -30,6 +30,8 @@
         <activity android:name=".video.Activity.LocalVideoPlayActivity"></activity>
         <activity android:name=".Acitivity.LoginActivity" />
         <activity android:name=".Acitivity.RegisterActivity" />
+        <activity android:name=".Acitivity.UserInfoActivity" />
+        <activity android:name=".Acitivity.UserInfoEditActivity" />
     </application>
 
 </manifest>

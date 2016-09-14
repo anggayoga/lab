@@ -26,7 +26,7 @@ private Handler handler = new Handler();
                 View view = inflater.inflate(R.layout.tab02, container, false);
                 final ListView listview = (ListView) view.findViewById(R.id.videolist);
                 JsonAdapter = new JsonAdapter(view.getContext());//实例化适配器
-                String url = "http://222.196.200.252:8080/video/Jsondata";//服务器Json数据的URL地址
+                String url = "http://222.196.201.175:8080/video/Jsondata";//服务器Json数据的URL地址
                 new HttpThread(url, listview, handler, JsonAdapter).start();//创建并启动线程
                 listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {//给列表项设置点击事件
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

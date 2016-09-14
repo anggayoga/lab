@@ -19,27 +19,63 @@ import static com.ifox.android.lab.R.id.toolbar;
 public class LoginActivity extends AppCompatActivity {
 
 	private Context context = this;
+
 	private TextView mRegister;
+
 	private EditText mAccount;
+
 	private EditText mPwd;
+
 	private Button mLoginButton;
+
 	private UserDataManager mUserDataManager;
+
 	private Toolbar mToolbar;
 
-	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
 
-		mAccount = (EditText) findViewById(R.id.login_edit_account);
-		mPwd = (EditText) findViewById(R.id.login_edit_pwd);
-		mLoginButton = (Button) findViewById(R.id.login_btn_login);
-		mRegister = (TextView) findViewById(R.id.register);
+		// 设置标题栏
+		toolBar();
 
-		Toolbar mToolbar = (Toolbar) findViewById(toolbar);
-		mToolbar.setTitle("登录");
+		// 寻找控件
+		init();
+
+		// 注册、登录点击事件
+		click();
+
+		// 开启数据库
+		openDb();
+	}
+
+	@Override
+	protected void onResume() {
+		if (mUserDataManager == null) {
+			mUserDataManager = new UserDataManager(this);
+			mUserDataManager.openDataBase();
+		}
+		super.onResume();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+	}
+
+	@Override
+	protected void onPause() {
+		if (mUserDataManager != null) {
+			mUserDataManager.closeDataBase();
+			mUserDataManager = null;
+		}
+		super.onPause();
+	}
+
+	private void toolBar() {mToolbar = (Toolbar) findViewById(toolbar);
 		mToolbar.setTitleTextAppearance(this, R.style.Theme_ToolBar_Base_Title);
+		mToolbar.setTitle("登录");
 		setSupportActionBar(mToolbar);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -48,7 +84,16 @@ public class LoginActivity extends AppCompatActivity {
 				onBackPressed();
 			}
 		});
+	}
 
+	private void init() {
+		mAccount = (EditText) findViewById(R.id.login_edit_account);
+		mPwd = (EditText) findViewById(R.id.login_edit_pwd);
+		mLoginButton = (Button) findViewById(R.id.login_btn_login);
+		mRegister = (TextView) findViewById(R.id.register);
+	}
+
+	private void click() {
 		mRegister.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -56,23 +101,22 @@ public class LoginActivity extends AppCompatActivity {
 				startActivity(intent);
 			}
 		});
-
-		//登录点击事件
 		mLoginButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				//判断用户名和密码是否与数据库一致，设置控件是否可见
 				login();
 			}
 		});
+	}
 
-		//开启数据库
+	private void openDb() {
 		if (mUserDataManager == null) {
 			mUserDataManager = new UserDataManager(this);
 			mUserDataManager.openDataBase();
-        }
+		}
 	}
 
-	//判断用户名和密码是否与数据库一致，设置控件是否可见
 	public void login() {
 		if (isUserNameAndPwdValid()) {
 			String userName = mAccount.getText().toString().trim();
@@ -107,26 +151,4 @@ public class LoginActivity extends AppCompatActivity {
 		return true;
 	}
 
-	@Override
-	protected void onResume() {
-		if (mUserDataManager == null) {
-			mUserDataManager = new UserDataManager(this);
-			mUserDataManager.openDataBase();
-        }
-		super.onResume();
-	}
-
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-	}
-
-	@Override
-	protected void onPause() {
-		if (mUserDataManager != null) {
-			mUserDataManager.closeDataBase();
-			mUserDataManager = null;
-        }
-		super.onPause();
-	}
 }

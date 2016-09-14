@@ -8,6 +8,11 @@
             android:title="个人资料"
             android:icon="@drawable/ic_user_info" />
 
+        <item
+            android:id="@+id/menu_logoff"
+            android:title="注销"
+            android:icon="@drawable/ic_logoff" />
+
     </group>
 
 </menu>

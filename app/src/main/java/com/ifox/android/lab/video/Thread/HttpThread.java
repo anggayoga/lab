@@ -92,7 +92,7 @@ public class HttpThread extends Thread {
             video.setVideoDate(date);
             video.setVideoTime(time);
             video.setVideoname(videoname);
-            String url = "http://222.196.200.252:8080/video/t2.mp4";
+            String url = "http://222.196.201.175:8080/video/t2.mp4";
             video.setVideourl(url);
             videos.add(video);
         }
