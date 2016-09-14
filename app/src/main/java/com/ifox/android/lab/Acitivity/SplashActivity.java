@@ -13,7 +13,7 @@ import com.ifox.android.lab.R;
  */
 public class SplashActivity extends Activity{
 
-    private final int SPLASH_DISPLAY_LENGHT = 1000*3; // 延迟1秒
+    private final int SPLASH_DISPLAY_LENGHT = 1000*3; // 延迟3秒
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -20,9 +20,7 @@ import static com.ifox.android.lab.R.id.toolbar;
 public class ShowNewsActivity extends AppCompatActivity {
 
     private TextView n_title;
-
     private TextView n_content;
-
     private ImageView n_attachAddress;
 
     @Override
@@ -30,13 +28,16 @@ public class ShowNewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_news);
 
+        // 设置标题栏
         toolBar();
+
+        // 寻找控件
         init();
+
+        // 为控件设置内容
         setContent();
     }
 
-
-    // 设置标题栏
     private void toolBar() {
         Toolbar mToolbar = (Toolbar) findViewById(toolbar);
         mToolbar.setTitle("公告");
@@ -51,14 +52,12 @@ public class ShowNewsActivity extends AppCompatActivity {
         });
     }
 
-    // 寻找控件
     private void init(){
         n_title = (TextView) findViewById(R.id.n_title);
         n_content = (TextView) findViewById(R.id.n_content);
         n_attachAddress = (ImageView) findViewById(R.id.n_attachAddress);
     }
 
-    // 为控件设置内容
     private void setContent() {
         NewsBean newsBean = DataHolder.getInstance().getNewsBeanData();
         n_title.setText(newsBean.n_title);

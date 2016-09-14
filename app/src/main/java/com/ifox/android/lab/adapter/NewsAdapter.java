@@ -19,7 +19,6 @@ import java.util.ArrayList;
 public class NewsAdapter extends BaseAdapter {
 
     private final ArrayList<NewsBean> list;
-
     private final Context context;
 
     public NewsAdapter(Context context,ArrayList<NewsBean> list){

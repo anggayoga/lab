@@ -20,26 +20,29 @@ import static com.ifox.android.lab.R.id.toolbar;
 public class ShowEduActivity extends AppCompatActivity {
 
     private TextView et_title;
-
     private TextView et_content;
-
     private ImageView et_attachAddress;
+    private Toolbar mToolbar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_edu);
 
+        // 设置标题栏
         toolBar();
+
+        // 寻找控件
         init();
+
+        // 为控件设置内容
         setContent();
     }
 
-    // 设置标题栏
     private void toolBar() {
-        Toolbar mToolbar = (Toolbar) findViewById(toolbar);
-        mToolbar.setTitle("教学资源");
+        mToolbar = (Toolbar) findViewById(toolbar);
         mToolbar.setTitleTextAppearance(this, R.style.Theme_ToolBar_Base_Title);
+        mToolbar.setTitle("教学资源");
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -50,14 +53,12 @@ public class ShowEduActivity extends AppCompatActivity {
         });
     }
 
-    // 寻找控件
     private void init() {
         et_title = (TextView) findViewById(R.id.et_title);
         et_content = (TextView) findViewById(R.id.et_content);
         et_attachAddress = (ImageView) findViewById(R.id.et_attachAddress);
     }
 
-    // 为控件设置内容
     private void setContent() {
         EduBean eduBean = DataHolder.getInstance().getEduBeanData();
         et_title.setText(eduBean.et_title);
